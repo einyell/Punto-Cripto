@@ -1,0 +1,24 @@
+p {
+    margin-top: 40px;
+    margin-left: 29px;
+}
+
+.sign-up-link {
+    color:  #EFEFF1;
+    font-size: 1.3rem;
+    margin-left: 22px;
+}
+
+.form-container { 
+    width: 300px;
+    color: #EFEFF1;
+    background-color: #a970ff; 
+}
+
+.mat-raised-button {
+    margin-top: 20px;
+    margin-left: 40px;
+    color: #7b1fa2;
+    background-color: #EFEFF1;
+}
+

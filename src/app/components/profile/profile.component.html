@@ -1,0 +1,42 @@
+<div class="form-container" *ngIf="user$ | async as user">
+  <h1>Editar perfil</h1>
+
+
+  <div class="profile-image">
+    <img class="imagen" [src]="user.photoURL ?? '/assets/images/image-placeholder.png'" />
+    <button mat-mini-fab (click)="inputField.click()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+  <input #inputField hidden type="file" (change)="uploadFile($event, user)" />
+
+  <form class="margin-top" [formGroup]="profileForm" (ngSubmit)="saveProfile(); uploadFile">
+    <div class="row">
+      <mat-form-field>
+        <input type="text" matInput formControlName="firstName" placeholder="Nombre" />
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput formControlName="lastName" placeholder="Apellidos" />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field>
+        <input type="text" matInput formControlName="displayName" placeholder="Nombre de usuario" />
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput formControlName="phone" placeholder="Teléfono" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="text" matInput formControlName="address" placeholder="Dirección" />
+      </mat-form-field>
+    </div>
+    <button type="submit" mat-raised-button class="save">Guardar datos</button>
+  </form>
+
+  <button (click)="deleteProfile()" mat-raised-button class="delete">
+    Eliminar cuenta
+  </button>
+</div>

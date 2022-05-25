@@ -1,0 +1,46 @@
+<body>
+<div class="form-container">
+
+  <h1>Nuevo usuario</h1>
+
+  <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" formControlName="name" />
+      <mat-error *ngIf="name?.errors?.['required']">
+        ¡Nombre obligatorio!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Dirección de email" formControlName="email" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        ¡Email obligatorio!
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        ¡No es un email válido!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="password" placeholder="Contraseña" formControlName="password" />
+      <mat-error *ngIf="password?.errors?.['required']">
+        ¡Contraseña obligatoria!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="password" placeholder="Confirme contraseña" formControlName="confirmPassword" />
+      <mat-error *ngIf="confirmPassword?.errors?.['required']">
+        ¡Confirma la contraseña!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+      ¡Las contraseñas no coinciden!
+    </mat-error>
+    <div>
+      <button type="submit" class="mat-raised-button">Registrarse</button>
+    </div>
+  </form>
+</div>
+</body>

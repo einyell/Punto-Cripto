@@ -1,0 +1,19 @@
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="4">
+
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+
+  <agm-marker [latitude]="37.893947" [longitude]="-1.3265379"></agm-marker> Murcia
+
+  <agm-marker [latitude]="36.893947" [longitude]="-5.4265379"></agm-marker> Sevilla
+
+  <agm-marker [latitude]="42.6950571" [longitude]="1.4840003"></agm-marker> Barcelona
+
+  <agm-marker [latitude]="40.295596" [longitude]="-3.4113311"></agm-marker>  Madrid
+
+  <agm-marker [latitude]="38.1522354" [longitude]="-8.0707453"></agm-marker> Portugal
+  
+</agm-map>

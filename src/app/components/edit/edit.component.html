@@ -1,0 +1,32 @@
+
+<div class="form-container">
+    <h1>Editar compra</h1>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <div class="row">
+        <mat-form-field>
+          <input type="text" matInput formControlName="coin" placeholder="Moneda" />
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput formControlName="amount" placeholder="Cantidad" />
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field>
+          <input type="text" matInput formControlName="price" placeholder="Precio de compra" />
+        </mat-form-field>
+        <mat-form-field>
+          <input type="date" matInput formControlName="date" placeholder="Fecha" />
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input type="text" matInput formControlName="notes" placeholder="Notas" />
+        </mat-form-field>
+      </div>
+    
+<button [disabled]="!editForm.valid" type="submit" mat-raised-button>Editar</button>
+    </form>
+
+
+</div>

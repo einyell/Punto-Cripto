@@ -1,0 +1,11 @@
+.form-container {
+    width: 300px;
+    color: #EFEFF1;
+    background-color: #a970ff; 
+}
+
+.mat-raised-button {
+    margin-left: 40px;
+    color: #7b1fa2;
+    background-color: #EFEFF1;
+}

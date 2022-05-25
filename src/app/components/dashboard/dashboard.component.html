@@ -1,0 +1,49 @@
+<body id="body">
+        <br>
+        <br>
+<h1 class="title1"> Principales criptomonedas por capitalización de mercado </h1>
+<h2 class="title2"> RANKING TOP 100 </h2>
+<!-- <h1>Welcome {{coins[0].name}}</h1> -->
+<br>
+
+
+<input type="text" class="form-control" placeholder="Buscar..." (keyup)="searchCoin()" [(ngModel)]="searchText"/>
+
+
+<div class="container">
+    <div class="table-responsive">
+    <table class="table" id="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Icono</th>
+                <th>Moneda</th>
+                <th>Simbolo</th>
+                <th>Precio Actual</th>
+                <th>Cambio Diario</th>
+                <th>Vol 24h.</th>
+                <th>Cap. de mercado</th>
+                <th>Opere</th>
+            </tr>
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let coin of filteredCoins">
+            <!--  <td>  {{ coin.name }}<button>id="btn_{{coin.name}}" (click)="addToList({{coin}})">Add</button></td>  -->
+                <td>{{ coin.market_cap_rank }}</td>
+                <td><img [src]="coin.image" style="width: 50px;"></td>
+                <td>{{ coin.name }}</td>
+                <td class="text-muted text-uppercase">{{ coin.symbol }} </td>
+                <td>$ {{ coin.current_price.toLocaleString() }}</td>
+                <td [ngClass]="coin.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger' ">{{ coin.price_change_percentage_24h.toLocaleString() }} %</td>
+                <td>{{ coin.total_volume.toLocaleString() }} $</td>
+                <td>{{ coin.market_cap.toLocaleString() }} $</td>
+
+                <button class="mat-raised-button" [routerLink]="['/create']"> Comprar <span class="text-uppercase">{{ coin.symbol }}</span> <img [src]="coin.image" class="smallcoin"></button>
+            </tr>
+        </tbody>
+    
+    </table>
+</div>
+</div>
+</body>

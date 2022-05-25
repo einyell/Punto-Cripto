@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <h1>● PUNTO CRYPTO</h1>
+  <button mat-button routerLink="dashboard">Inicio</button>
+  <button mat-button routerLink="news"> Noticias</button>
+  <button mat-button routerLink="map">Puntos físicos</button>
+
+  <ng-template #registerButton>
+    <button mat-button routerLink="sign-up">Registrarse</button>
+  </ng-template>
+
+  <ng-container *ngIf="user$ | async as user; else registerButton">
+    <button mat-button routerLink="home">Tu Portfolio</button>
+  </ng-container>
+
+
+  <ng-template #loginButton>
+    <button mat-button routerLink="login"><mat-icon>login</mat-icon>Iniciar sesión</button>
+  </ng-template>
+
+  <!-- CONTENEDOR DESPLEGABLE (SE MUESTRA SI NO SE ESTA MOSTRANDO LOGIN)-->
+  <ng-container *ngIf="user$ | async as user; else loginButton">
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <img class="profile-image-toolbar" [src]="user.photoURL ?? 'assets/images/image-placeholder.png'" />
+      {{ user.displayName }}
+      <mat-icon>expand_more</mat-icon>
+    </button>
+  </ng-container>
+
+</mat-toolbar>
+
+
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item routerLink="/profile"><mat-icon>account_circle</mat-icon>Tu perfil</button>
+  <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon>Cerrar sesión</button>
+</mat-menu>
+
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

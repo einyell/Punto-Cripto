@@ -1,0 +1,29 @@
+.imagen {
+    margin-left: 130px;
+    margin-bottom: 7%;
+    border-radius: 50%;
+    width: 130px;
+}
+
+.form-container { 
+    width: 500px;
+    color: #EFEFF1;
+    background-color: #a970ff; 
+}
+
+.save {
+    margin-top: 30px;
+    margin-left: 140px;
+    color: #7b1fa2;
+    background-color: #EFEFF1;
+}
+
+.delete{
+    margin-top: 30px;
+    margin-left: 138px;
+    background-color: #ff5151;
+    color: #EFEFF1;
+}
+
+
+

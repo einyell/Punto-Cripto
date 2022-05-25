@@ -1,0 +1,26 @@
+.content {
+    padding: 30px;
+    background-color: #0e0e10;
+}
+
+.mat-toolbar {
+    justify-content: space-between;
+    background-color: #1f1f23;
+    color: #a970ff;
+}
+
+.profile-image-toolbar{
+
+    border-radius: 50%;
+    width: 700px;
+}
+
+h1 {
+    font-weight: 500;
+    color: #EFEFF1;
+}
+
+.profile-image-toolbar {
+    width: 35px;
+    height: 35px;
+}

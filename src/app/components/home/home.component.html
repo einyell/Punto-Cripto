@@ -1,0 +1,83 @@
+<div class="form-container" *ngIf="user$ | async as user">
+
+  <img class="imagen" [src]="user.photoURL ?? '/assets/images/image-placeholder.png'" />
+  <h1>Este es tu espacio personal, {{user.displayName}}:</h1>
+
+
+  <table class="table" id="table">
+    <thead>
+      <tr>
+        <th>Nombre de usuario:</th>
+        <th>Email:</th>
+        <th>Nombre: </th>
+        <th>Apellido:</th>
+        <th>Telefono:</th>
+        <th>Calle:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <td>{{user.displayName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.address}}</td>
+    </tbody>
+  </table>
+
+
+
+  <button routerLink="/create" class="mat-raised-button" id="create">Añadir nueva compra</button>
+  <div class="table-responsive">
+    <table class="table" id="table">
+      <thead>
+        <tr>
+          <th>Moneda</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Fecha</th>
+          <th>Notas</th>
+          <th>ID de la compra</th>
+          <th>AUTOR</th>
+        </tr>
+      </thead>
+
+
+      <tbody *ngFor="let coin of Coins">
+        <tr *ngIf="user.displayName == coin.user">
+  
+            <td> {{ coin.coin }}</td>
+            <td> {{ coin.price }}</td>
+            <td> {{ coin.amount }}</td>
+            <td> {{ coin.date }}</td>
+            <td> {{ coin.notes }}</td>
+            <td> {{ coin.id }}</td>
+            <td> {{ coin.user }}</td>
+
+            <td><button routerLink="/edit/{{coin.id}}" class="mat-raised-button" id="edit">Editar</button></td>
+            <td><button (click)="deleteRecord(coin)" class="mat-raised-button" id="delete">Eliminar</button></td>
+          </tr>
+      
+      </tbody>
+
+      <!-- PARTE DEL ADMIN -->
+      <tbody *ngFor="let coin of Coins">
+      <tr *ngIf="user.displayName == 'admin'">
+       
+            <td> {{ coin.coin }}</td>
+            <td> {{ coin.price }}</td>
+            <td> {{ coin.amount }}</td>
+            <td> {{ coin.date }}</td>
+            <td> {{ coin.notes }}</td>
+            <td> {{ coin.id }}</td>
+            <td> {{ coin.user }}</td>
+            <td><button routerLink="/edit/{{coin.id}}" class="mat-raised-button">Editar</button></td>
+            <td><button (click)="deleteRecord(coin)" class="mat-raised-button" id="delete">Eliminar</button></td>
+          </tr>
+    </tbody>
+    </table>
+
+
+
+
+  </div>
