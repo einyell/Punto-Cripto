@@ -73,3 +73,7 @@ td {
     color: #efeff1;
     background-color: #a970ff;
 }
+
+tbody{
+    padding-top: 15%;
+}
