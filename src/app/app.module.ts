@@ -34,6 +34,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { EditComponent } from './components/edit/edit.component';
 import { CreateComponent } from './components/create/create.component';
 import { NewsComponent } from './components/news/news.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -74,6 +75,7 @@ import { NewsComponent } from './components/news/news.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

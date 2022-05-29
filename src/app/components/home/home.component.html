@@ -59,10 +59,10 @@
       
       </tbody>
 
-      <!-- PARTE DEL ADMIN -->
+      <!-- ADMIN -->
       <tbody *ngFor="let coin of Coins">
       <tr *ngIf="user.displayName == 'admin'">
-       
+        
             <td> {{ coin.coin }}</td>
             <td> {{ coin.price }}</td>
             <td> {{ coin.amount }}</td>
@@ -70,6 +70,7 @@
             <td> {{ coin.notes }}</td>
             <td> {{ coin.id }}</td>
             <td> {{ coin.user }}</td>
+
             <td><button routerLink="/edit/{{coin.id}}" class="mat-raised-button">Editar</button></td>
             <td><button (click)="deleteRecord(coin)" class="mat-raised-button" id="delete">Eliminar</button></td>
           </tr>

@@ -1,0 +1,63 @@
+.images {
+    width: 1000px;
+    height: 650px;
+    margin-left: 14.5%;
+    border-radius: 3%;
+}
+
+img {
+    width: 1000px;
+    border-radius: 3%;
+}
+
+.form-container {
+    width: 1500px;
+    height: auto;
+    color: #EFEFF1;
+    background-color: #1f1f23;
+}
+
+h1 {
+    color: #EFEFF1;
+    text-align: center;
+    font-weight: 500;
+    margin: 2%;
+}
+
+h3 {
+    color: #EFEFF1;
+    text-align: center;
+    font-weight: 500;
+    font-size: 150%;
+    margin: 2%;
+}
+
+p{
+    margin: 2%;
+}
+.carousel-caption {
+    left: 203px;
+    width: 1000px;
+    color: #EFEFF1;
+    background-color: #0e0e10;
+    border-radius:1%;
+}
+
+#dashboard {
+    margin-top: 15px;
+    margin-left: 15%;
+    width: 170px;
+    height: 45px;
+    color: #efeff1;
+    background-color: #a970ff;
+}
+
+
+#home {
+    margin-left: 46%;
+    width: 170px;
+    height: 45px;
+    color: #efeff1;
+    background-color: #449128;
+}
+
