@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'profile', component: ProfileComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'edit/:id', component: EditComponent, ...canActivate(redirectUnauthorizedToLogin) },
-  {  path: 'create', component: CreateComponent, ...canActivate(redirectUnauthorizedToLogin)},
+  { path: 'create', component: CreateComponent, ...canActivate(redirectUnauthorizedToLogin) },
 ];
 
 @NgModule({

@@ -5,10 +5,10 @@
     width: 130px;
 }
 
-.form-container { 
+.form-container {
     width: 500px;
     color: #EFEFF1;
-    background-color: #a970ff; 
+    background-color: #a970ff;
 }
 
 .save {
@@ -18,12 +18,9 @@
     background-color: #EFEFF1;
 }
 
-.delete{
+.delete {
     margin-top: 30px;
     margin-left: 138px;
     background-color: #ff5151;
     color: #EFEFF1;
 }
-
-
-

@@ -23,11 +23,10 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { MatMenuModule } from '@angular/material/menu';
 import { ProfileComponent } from './components/profile/profile.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-import { LandingComponent } from './components/landing/landing.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MapComponent } from './components/map/map.component';
 
-//IMPORTAMOS LAS CLASES DE FIRESTORE
+//CLASES DE FIRESTORE
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -45,7 +44,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SignUpComponent,
     HomeComponent,
     ProfileComponent,
-    LandingComponent,
     DashboardComponent,
     MapComponent,
     EditComponent,

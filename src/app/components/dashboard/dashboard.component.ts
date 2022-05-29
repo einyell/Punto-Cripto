@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-
 
 interface Coin {
   market_cap_rank: number;
@@ -16,12 +13,12 @@ interface Coin {
   market_cap: number;
 }
 
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent implements OnInit {
   coins: Coin[] = [];
   filteredCoins: Coin[] = [];
@@ -36,7 +33,7 @@ export class DashboardComponent implements OnInit {
     'Volumen 24 horas',
     'Cap. de mercado',
   ];
-  
+
   searchText = '';
 
   constructor(private http: HttpClient) { }
@@ -51,13 +48,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.http.get<Coin[]>(this.api).subscribe((res) => {
-        this.coins = res;
-        this.filteredCoins = res;
-        console.log(res);
-      }
+      this.coins = res;
+      this.filteredCoins = res;
+      console.log(res);
+    }
     );
   }
-
-
 
 }

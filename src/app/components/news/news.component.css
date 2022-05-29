@@ -32,15 +32,16 @@ h3 {
     margin: 2%;
 }
 
-p{
+p {
     margin: 2%;
 }
+
 .carousel-caption {
     left: 203px;
     width: 1000px;
     color: #EFEFF1;
     background-color: #0e0e10;
-    border-radius:1%;
+    border-radius: 1%;
 }
 
 #dashboard {
@@ -60,4 +61,3 @@ p{
     color: #efeff1;
     background-color: #449128;
 }
-

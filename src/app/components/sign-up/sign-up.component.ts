@@ -75,7 +75,7 @@ export class SignUpComponent implements OnInit {
         this.toast.observe({
           success: 'Enhorabuena! cuenta creada con éxito',
           loading: 'Registrándose......',
-          error: ({  message }) => `${message}`,
+          error: ({ message }) => `${message}`,
         })
       )
       .subscribe(() => {

@@ -1,31 +1,31 @@
 <div class="form-container">
-    <h1>Iniciar sesión</h1>
+  <h1>Iniciar sesión</h1>
 
-    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
 
-      <mat-form-field>
-        <input matInput placeholder="Dirección de email" formControlName="email"/>
-        <mat-error *ngIf="email?.errors?.['required']">
-          ¡Email obligatorio!
-        </mat-error>
-        <mat-error *ngIf="email?.errors?.['email']">
-          ¡No es un email válido!
-        </mat-error>
-      </mat-form-field>
-
-
-      <mat-form-field>
-        <input matInput type="password" placeholder="Contraseña" formControlName="password" />
-        <mat-error *ngIf="password?.errors?.['required']">
-          ¡No es una contraseña válida!
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Dirección de email" formControlName="email" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        ¡Email obligatorio!
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        ¡No es un email válido!
+      </mat-error>
+    </mat-form-field>
 
 
-          <button type="submit" mat-raised-button>Inciar sesión</button>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Contraseña" formControlName="password" />
+      <mat-error *ngIf="password?.errors?.['required']">
+        ¡No es una contraseña válida!
+      </mat-error>
+    </mat-form-field>
 
 
-      <p>¿Todavia sin cuenta? </p>
-      <a class="sign-up-link" routerLink="/sign-up">¡Regístrate aqui!</a>
-    </form>
-  </div>
+    <button type="submit" mat-raised-button>Inciar sesión</button>
+
+
+    <p>¿Todavia sin cuenta? </p>
+    <a class="sign-up-link" routerLink="/sign-up">¡Regístrate aqui!</a>
+  </form>
+</div>

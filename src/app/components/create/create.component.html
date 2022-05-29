@@ -24,8 +24,11 @@
         <input type="text" matInput formControlName="notes" placeholder="Notas" />
       </mat-form-field>
 
-      <mat-form-field>
-        <input type="text" matInput formControlName="user" placeholder="Nombre autor:" />
+      <mat-form-field *ngIf="user$ | async as user">
+
+        <input type="text" matInput formControlName="user"
+          placeholder="Confirme compra escribiendo su nombre: {{ user.displayName }}">
+
       </mat-form-field>
     </div>
 

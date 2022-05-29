@@ -16,7 +16,7 @@ export class AppComponent {
     private authService: AuthService,
     public usersService: UsersService,
     private router: Router
-  ) {}
+  ) { }
 
   logout() {
     this.authService.logout().subscribe(() => {

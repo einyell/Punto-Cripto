@@ -1,7 +1,7 @@
-.form-container { 
+.form-container {
     width: 500px;
     color: #EFEFF1;
-    background-color: #a970ff; 
+    background-color: #a970ff;
 }
 
 .mat-raised-button {
@@ -10,4 +10,3 @@
     color: #7b1fa2;
     background-color: #EFEFF1;
 }
-

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CoinService } from 'src/app/services/coin.service';
 import { Form, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { user } from '@angular/fire/auth';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { UsersService } from 'src/app/services/users.service';
+import { tap } from 'rxjs';
 
 
 
@@ -13,24 +15,32 @@ import { user } from '@angular/fire/auth';
 })
 export class CreateComponent implements OnInit {
 
-  public CoinForm : FormGroup
+  user$ = this.usersService.currentUserProfile$;
+
+  public CoinForm: FormGroup
 
   constructor(
-    public coinService : CoinService,
-    public formBuilder : FormBuilder,
-    public router : Router
+    private usersService: UsersService,
+    public coinService: CoinService,
+    public formBuilder: FormBuilder,
+    public router: Router
   ) {
     this.CoinForm = this.formBuilder.group({
-    coin : [''],
-    price : [''],
-    amount : [''],
-    date : [''],
-    notes : [''],
-    user : [''],
+      coin: [''],
+      price: [''],
+      amount: [''],
+      date: [''],
+      notes: [''],
+      user: [''],
     })
-   }
+  }
 
   ngOnInit(): void {
+    this.usersService.currentUserProfile$
+      .pipe(untilDestroyed(this), tap(console.log))
+      .subscribe((user) => {
+        this.CoinForm.patchValue({ ...user });
+      });
   }
 
 

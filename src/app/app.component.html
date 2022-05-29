@@ -1,5 +1,7 @@
 <mat-toolbar>
-  <button mat-button routerLink="dashboard"><h1>● PUNTO CRYPTO</h1></button>
+  <button mat-button routerLink="dashboard">
+    <h1>● PUNTO CRYPTO</h1>
+  </button>
   <button mat-button routerLink="dashboard">Inicio</button>
   <button mat-button routerLink="news"> Noticias</button>
   <button mat-button routerLink="map">Puntos físicos</button>
@@ -14,7 +16,9 @@
 
 
   <ng-template #loginButton>
-    <button mat-button routerLink="login"><mat-icon>login</mat-icon>Iniciar sesión</button>
+    <button mat-button routerLink="login">
+      <mat-icon>login</mat-icon>Iniciar sesión
+    </button>
   </ng-template>
 
   <!-- CONTENEDOR DESPLEGABLE (SE MUESTRA SI NO SE ESTA MOSTRANDO LOGIN)-->
@@ -30,8 +34,12 @@
 
 
 <mat-menu #userMenu="matMenu">
-  <button mat-menu-item routerLink="/profile"><mat-icon>account_circle</mat-icon>Tu perfil</button>
-  <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon>Cerrar sesión</button>
+  <button mat-menu-item routerLink="/profile">
+    <mat-icon>account_circle</mat-icon>Tu perfil
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>Cerrar sesión
+  </button>
 </mat-menu>
 
 

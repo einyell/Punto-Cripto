@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit {
     private imageUploadService: ImageUploadService,
     private toast: HotToastService,
     private usersService: UsersService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.usersService.currentUserProfile$

@@ -10,23 +10,23 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  public editForm : FormGroup
-  coinRef:any
+  public editForm: FormGroup
+  coinRef: any
 
   constructor(
-    public coinService : CoinService,
-    public formBuilder : FormBuilder,
-    public router : Router,
-    private activeRoute : ActivatedRoute,
+    public coinService: CoinService,
+    public formBuilder: FormBuilder,
+    public router: Router,
+    private activeRoute: ActivatedRoute,
   ) {
     this.editForm = this.formBuilder.group({
-      coin : [''],
-      price : [''],
-      amount : [''],
-      date : [''],
-      notes : [''],
-      })
-   }
+      coin: [''],
+      price: [''],
+      amount: [''],
+      date: [''],
+      notes: [''],
+    })
+  }
 
   ngOnInit(): void {
     const id = this.activeRoute.snapshot.paramMap.get('id')
@@ -38,7 +38,7 @@ export class EditComponent implements OnInit {
         amount: [this.coinRef.amount],
         date: [this.coinRef.date],
         notes: [this.coinRef.notes],
-      } 
+      }
       )
     })
   }
