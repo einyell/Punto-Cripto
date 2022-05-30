@@ -7,36 +7,36 @@
       <mat-form-field>
         <input matInput placeholder="Nombre de usuario" formControlName="name" />
         <mat-error *ngIf="name?.errors?.['required']">
-          ¡Nombre obligatorio!
+          <p style="color: black;">¡Nombre obligatorio!</p>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field>
         <input matInput placeholder="Dirección de email" formControlName="email" />
         <mat-error *ngIf="email?.errors?.['required']">
-          ¡Email obligatorio!
+          <p style="color: black;">¡Email obligatorio!</p>
         </mat-error>
         <mat-error *ngIf="email?.errors?.['email']">
-          ¡No es un email válido!
+          <p style="color: black;">¡No es un email válido!</p>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field>
         <input matInput type="password" placeholder="Contraseña" formControlName="password" />
         <mat-error *ngIf="password?.errors?.['required']">
-          ¡Contraseña obligatoria!
+          <p style="color: black;">¡Contraseña obligatoria!</p>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field>
         <input matInput type="password" placeholder="Confirme contraseña" formControlName="confirmPassword" />
         <mat-error *ngIf="confirmPassword?.errors?.['required']">
-          ¡Confirma la contraseña!
+          <p style="color: black;">¡Confirma la contraseña!</p>
         </mat-error>
       </mat-form-field>
 
       <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
-        ¡Las contraseñas no coinciden!
+        <p style="color: black;">¡Las contraseñas no coinciden!</p>
       </mat-error>
       <div>
         <button type="submit" class="mat-raised-button">Registrarse</button>

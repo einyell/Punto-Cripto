@@ -5,7 +5,8 @@ h1 {
 }
 
 .imagen {
-    margin-left: 650px;
+    display: block;
+    margin: auto;
     margin-bottom: 20px;
     border-radius: 50%;
     width: 130px;
@@ -18,11 +19,8 @@ h1 {
     background-color: #1f1f23;
 }
 
-.campo {
-    margin: 15px;
-}
-
 #table {
+    margin: auto;
     background-color: #1f1f23;
     text-align: center;
 }
@@ -38,9 +36,10 @@ td {
 
 
 #create {
-    margin-top: 50px;
-    margin-left: 630px;
-    margin-bottom: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 170px;
     height: 45px;
     color: #efeff1;

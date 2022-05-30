@@ -6,10 +6,10 @@
     <mat-form-field>
       <input matInput placeholder="Dirección de email" formControlName="email" />
       <mat-error *ngIf="email?.errors?.['required']">
-        ¡Email obligatorio!
+        <div style="color: black;">¡Email obligatorio!</div>
       </mat-error>
       <mat-error *ngIf="email?.errors?.['email']">
-        ¡No es un email válido!
+        <div style="color: black;">¡No es un email válido!</div>
       </mat-error>
     </mat-form-field>
 
@@ -17,7 +17,7 @@
     <mat-form-field>
       <input matInput type="password" placeholder="Contraseña" formControlName="password" />
       <mat-error *ngIf="password?.errors?.['required']">
-        ¡No es una contraseña válida!
+        <div style="color: black;">¡No es una contraseña válida!</div>
       </mat-error>
     </mat-form-field>
 

@@ -1,16 +1,21 @@
 .images {
+    display: block;
+    margin: auto;
     width: 1000px;
     height: 650px;
-    margin-left: 14.5%;
     border-radius: 3%;
 }
 
 img {
+    display: block;
+    margin: auto;
     width: 1000px;
     border-radius: 3%;
 }
 
 .form-container {
+    display: block;
+    margin: auto;
     width: auto;
     height: auto;
     color: #EFEFF1;
@@ -37,6 +42,8 @@ p {
 }
 
 .carousel-caption {
+    display: block;
+    margin: auto;
     width: 1000px;
     color: #EFEFF1;
     background-color: #0e0e10;
@@ -44,8 +51,8 @@ p {
 }
 
 #dashboard {
-    margin-top: 15px;
-    margin-left: 15%;
+    margin-top: 1%;
+    margin-left: 17%;
     width: 170px;
     height: 45px;
     color: #efeff1;
@@ -54,7 +61,7 @@ p {
 
 
 #home {
-    margin-left: 46%;
+    margin-left: 44%;
     width: 170px;
     height: 45px;
     color: #efeff1;
