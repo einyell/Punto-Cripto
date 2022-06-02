@@ -27,6 +27,7 @@
 
 
   <button routerLink="/create" class="mat-raised-button" id="create">Añadir nueva compra</button>
+
   <div class="table-responsive">
     <table class="table" id="table">
       <thead>
@@ -43,7 +44,7 @@
 
 
       <tbody *ngFor="let coin of Coins">
-        <tr *ngIf="user.displayName == coin.user">
+        <tr *ngIf="user.displayName == coin.displayName && user.displayName != 'admin'">
 
           <td> {{ coin.coin }}</td>
           <td> {{ coin.price }}</td>
@@ -51,13 +52,14 @@
           <td> {{ coin.date }}</td>
           <td> {{ coin.notes }}</td>
           <td> {{ coin.id }}</td>
-          <td> {{ coin.user }}</td>
+          <td> {{ coin.displayName }}</td>
 
           <td><button routerLink="/edit/{{coin.id}}" class="mat-raised-button" id="edit">Editar</button></td>
           <td><button (click)="deleteRecord(coin)" class="mat-raised-button" id="delete">Eliminar</button></td>
         </tr>
 
       </tbody>
+ 
 
       <!-- ADMIN -->
       <tbody *ngFor="let coin of Coins">
@@ -69,12 +71,13 @@
           <td> {{ coin.date }}</td>
           <td> {{ coin.notes }}</td>
           <td> {{ coin.id }}</td>
-          <td> {{ coin.user }}</td>
+          <td> {{ coin.displayName }}</td>
 
           <td><button routerLink="/edit/{{coin.id}}" class="mat-raised-button">Editar</button></td>
           <td><button (click)="deleteRecord(coin)" class="mat-raised-button" id="delete">Eliminar</button></td>
         </tr>
       </tbody>
+
     </table>
 
 

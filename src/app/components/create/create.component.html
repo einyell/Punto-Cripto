@@ -1,7 +1,7 @@
-<div class="form-container">
+<div class="form-container" *ngIf="user$ | async as user">
   <h1>Añadir compra</h1>
 
-  <form [formGroup]="CoinForm" (ngSubmit)="onSubmit()" novalidate>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="row">
 
       <mat-form-field>
@@ -24,14 +24,13 @@
         <input type="text" matInput formControlName="notes" placeholder="Notas" />
       </mat-form-field>
 
-      <mat-form-field *ngIf="user$ | async as user">
 
-        <input type="text" matInput formControlName="user"
-          placeholder="Confirme compra escribiendo su nombre: {{ user.displayName }}">
-
-      </mat-form-field>
+     
+        <input type="hidden"  formControlName="displayName">
+   <!-- <input type="text" matInput formControlName="user" value="{{user.displayName}}"> -->
+     
     </div>
 
-    <button [disabled]="!CoinForm.valid" type="submit" mat-raised-button>Añadir</button>
+    <button [disabled]="!addForm.valid" type="submit" mat-raised-button>Añadir</button>
   </form>
 </div>

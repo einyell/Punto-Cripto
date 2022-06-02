@@ -45,7 +45,7 @@ export class EditComponent implements OnInit {
   onSubmit() {
     const id = this.activeRoute.snapshot.paramMap.get('id')
     this.coinService.updateCoin(this.editForm.value, id)
-    this.router.navigate([''])
+    this.router.navigate(['/home'])
   }
 
 }

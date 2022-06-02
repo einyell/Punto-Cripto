@@ -6,4 +6,5 @@ export class Coin {
   date?: string;
   notes?: string;
   user?: string;
+  displayName?: string;
 }
