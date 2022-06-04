@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   background-color: #0e0e10;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-container {
