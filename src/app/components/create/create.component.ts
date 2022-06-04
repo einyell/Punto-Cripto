@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { UsersService } from 'src/app/services/users.service';
 import { tap } from 'rxjs';
-import { user } from '@angular/fire/auth';
 
 
 @UntilDestroy()

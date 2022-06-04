@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-
-//IMPORTAMOS LAS CLASES DE FIRESTORE
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-
-//IMPORTAMOS NUESTRO MODELO DE MONEDA
 import { Coin } from 'src/app/models/coin';
 
 @Injectable({

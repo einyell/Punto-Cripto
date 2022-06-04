@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HotToastService } from '@ngneat/hot-toast';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { UsersService } from 'src/app/services/users.service';
-//MODELO
 import { Coin } from 'src/app/models/coin';
-//SERVICIO
 import { CoinService } from 'src/app/services/coin.service';
 
 @UntilDestroy()

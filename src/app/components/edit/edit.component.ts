@@ -21,8 +21,8 @@ export class EditComponent implements OnInit {
   ) {
     this.editForm = this.formBuilder.group({
       coin: [''],
-      price: [''],
       amount: [''],
+      price: [''],
       date: [''],
       notes: [''],
     })
@@ -34,8 +34,8 @@ export class EditComponent implements OnInit {
       this.coinRef = res
       this.editForm = this.formBuilder.group({
         coin: [this.coinRef.coin],
-        price: [this.coinRef.price],
         amount: [this.coinRef.amount],
+        price: [this.coinRef.price],
         date: [this.coinRef.date],
         notes: [this.coinRef.notes],
       }
