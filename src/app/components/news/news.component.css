@@ -42,9 +42,11 @@ p {
 }
 
 .carousel-caption {
+    display:flow-root;
+    margin: auto;
     color: #EFEFF1;
     width: 1000px;
-    margin-left: -17px;
+    height: fit-content;
     background-color: #0e0e10;
     border-radius: 3%;
 }

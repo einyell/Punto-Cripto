@@ -25,7 +25,6 @@
   </table>
 
 
-
   <button routerLink="/create" class="mat-raised-button" id="create">Añadir nueva compra</button>
 
   <div class="table-responsive">
@@ -53,7 +52,7 @@
           <td> {{ coin.notes }}</td>
           <td> {{ coin.id }}</td>
           <td> {{ coin.displayName }}</td>
-
+    
           <td><button routerLink="/edit/{{coin.id}}" class="mat-raised-button" id="edit">Editar</button></td>
           <td><button (click)="deleteRecord(coin)" class="mat-raised-button" id="delete">Eliminar</button></td>
         </tr>
